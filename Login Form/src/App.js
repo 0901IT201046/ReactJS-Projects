@@ -13,41 +13,47 @@ const App = () =>{
         console.log(event.target.value);
         console.log(event.target.name);
 
-        const {value, name} = event.target;
+        const {name, value} = event.target;
 
         setFullName((preValue) =>{
-            if(name === 'fName'){
-                return {
-                fname : value,
-                lname : preValue.lname,
-                email : preValue.email,
-                phone : preValue.phone,
-            };
+            console.log(preValue);
+            return {
+                ...preValue,
+                [name] : value,
             }
-            else if(name === 'lName'){
-                return {
-                fname : preValue.fname,
-                lname : value,
-                email : preValue.email,
-                phone : preValue.phone,
-            };
-            }
-            else if(name === 'email'){
-                return {
-                fname : preValue.fname,
-                lname : preValue.lname,
-                email : value,
-                phone : preValue.phone,
-            };
-            }
-            else if(name === 'phone'){
-                return {
-                fname : preValue.fname,
-                lname : preValue.lname,
-                email : preValue.email,
-                phone : value,
-            };
-            }
+
+            // if(name === 'fName'){
+            //     return {
+            //     fname : value,
+            //     lname : preValue.lname,
+            //     email : preValue.email,
+            //     phone : preValue.phone,
+            // };
+            // }
+            // else if(name === 'lName'){
+            //     return {
+            //     fname : preValue.fname,
+            //     lname : value,
+            //     email : preValue.email,
+            //     phone : preValue.phone,
+            // };
+            // }
+            // else if(name === 'email'){
+            //     return {
+            //     fname : preValue.fname,
+            //     lname : preValue.lname,
+            //     email : value,
+            //     phone : preValue.phone,
+            // };
+            // }
+            // else if(name === 'phone'){
+            //     return {
+            //     fname : preValue.fname,
+            //     lname : preValue.lname,
+            //     email : preValue.email,
+            //     phone : value,
+            // };
+            // }
         });
     };
 
@@ -67,14 +73,14 @@ const App = () =>{
             <input 
                 type="text" 
                 placeholder="Enter Your First Name"
-                name="fName"
+                name="fname"
                 onChange={inputEvent} 
                 value={fullName.fname}   
             />
             <input 
                 type="text" 
                 placeholder="Enter Your Last Name"
-                name="lName"
+                name="lname"
                 onChange={inputEvent} 
                 value={fullName.lname}   
             />
