@@ -1,7 +1,7 @@
 # Tic Tac Toe
 This Repo is build under the Intrenshala React Training projects.
 - As part of training I have built a single page react application of two player Tic Tac Toe
-- Deployed in on surge server at https://tictactoefun.surge.sh/
+- Deployed in on surge server at https://tictac1game.surge.sh/
 -
 - In this training I learnt the fundamentals of components, modules, props, hooks, events, lifecycle events, dynamic styling in react and many other features of react apps from handling state of functions to updating and manipulating them to serve our purpose
 - was also introduced to SASS preprocessor and Surge server for deploying of baisc frontend web apps
